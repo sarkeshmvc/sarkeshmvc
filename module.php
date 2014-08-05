@@ -34,6 +34,6 @@ class card_module extends card_view{
 		}
 	
 	}
-	
+	//end of plugin
 }
 ?>
