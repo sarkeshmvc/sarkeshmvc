@@ -1,3 +1,4 @@
+//تغیرات توسط حسین منتصری داده شده است
 <?php
  class card extends card_module{
   public function insertcard(){
@@ -22,4 +23,5 @@ public function insert($e){
 
 }   
 ?>
+//تغیرات توسط حسین منتصری داده شده است
 
