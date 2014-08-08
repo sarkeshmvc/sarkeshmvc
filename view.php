@@ -47,6 +47,7 @@ $l->configure('LABEL',$g['cardname']);
 $l2->configure('LABEL',$g['price']);
 $b=new ctr_button;
 $b->configure('LABEL','خرید');
+//لینک آدرس دهی برای هر دکمه هنوز تابع بوی تعریف نشده است
 $b->configure('HREF','http://localhost/sarkesh/?plugin=card&action=buy&id='.$g['id']);
 $row->add($l,2);
 $row->add($l2,2);
