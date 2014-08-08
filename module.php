@@ -1,3 +1,5 @@
+//تغیرات توسط حسین منتصری داده شده است
+
 <?php
 class card_module extends card_view{
 	
