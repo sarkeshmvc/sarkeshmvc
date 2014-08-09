@@ -52,7 +52,7 @@ $b->configure('HREF','http://localhost/sarkesh/?plugin=card&action=buy&id='.$g['
 $row->add($l,2);
 $row->add($l2,2);
 $row->add($b,2);
-$tb->add($row);
+$tb->add_row($row);
 }
  $form=new ctr_form('فرم نمایش کارت');
  $form->add($tb); 
