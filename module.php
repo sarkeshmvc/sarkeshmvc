@@ -14,7 +14,7 @@ class card_module extends card_view{
    
 	// شمارش تعداد سطر تکراری
 		$db=cls_orm::count('insert',"cardname=?",array($e['usercard']['VALUE'])); 
-		if($db->count==0)
+		if($db==0)
 		{
 		// اگه همچنین نام کارتی وجود نداشت ذخیرش کن در جدول اینسرت
 	    cls_orm::store($cr); 
