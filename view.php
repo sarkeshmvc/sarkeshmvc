@@ -35,6 +35,14 @@ class card_view{
 	public function view_showcard($f){
 //$f=متغیر واکشی اطلاعات جدول اینسرت
 //ساخت جدول
+$l3=new ctr_LABEL;
+$l4=new ctr_LABEL;
+$l3->configure('LABEL',_('نام کارت'));
+$l4->configure('LABEL',_('قیمت کارت'));
+
+$row2=new ctr_row;
+$row2->add($l3,2);
+$row2->add($l4,3);
 $tb = new ctr_table;
 //حلقه برای کالکشن اف دیتا بیسو حرکت عنصر جی در کالشکن
 foreach($f as $g)
@@ -55,7 +63,7 @@ $row->add($b,2);
 $tb->add_row($row);
 }
  $form=new ctr_form('فرم نمایش کارت');
- $form->add($tb); 
+ $form->add_array(array($row2,$tb)); 
  return array(_('انتخاب کارت'),$form->draw());
 		
 }
