@@ -11,6 +11,11 @@ class card_module extends card_view{
 	$cr=cls_orm::dispense('insert');
 	$cr->cardname=$e['usercard']['VALUE'];
 	$cr->price=$e['numbercard']['VALUE'];
+	//اگر تکش باکس اول یا دوم خالی بودن پیغام پر کردن صادر شود
+	 if(trim($e['usercard']['VALUE']) == '' || trim($e['numbercard']['VALUE'])==''){
+			$e['RV']['MODAL'] = cls_page::show_block(_('پیام'),_('لطفا کادرهای خالی را پر کنید'),'MODAL','type-warning');
+			return $e;
+		}
    
 	// شمارش تعداد سطر تکراری
 		$db=cls_orm::count('insert',"cardname=?",array($e['usercard']['VALUE'])); 
